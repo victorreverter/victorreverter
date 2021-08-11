@@ -1,0 +1,257 @@
+@import "normalize", "meyer", "basevalues";
+
+.head-container {
+    opacity: 1;
+    top: 0%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    
+    padding: 0 0 0;
+    // position: absolute;
+    // bottom: 0;
+    // left: 50%;
+    // transform: translate(-50%, 0%) scale(0.9);
+    transform: scale(0.9);
+    // opacity: 0;
+    z-index: 10;
+
+    .title-container {
+        width: 100%;
+
+        h3 {
+            color: $white;
+            text-align: center;
+            font-weight: 700;
+
+            font-size: 3em;
+            line-height: 0.8em;
+            padding-bottom: 0.25em;
+
+            .main-span {
+                font-size: 0.63em;
+
+                .sub-span {
+                    color: $colorResalte2;
+                    // animation: animateName 5s infinite ease-in-out;
+                }
+            }
+            // /* Create the gradient. */
+            // background-image: linear-gradient(300deg, $colorGradient, $colorResalte);
+
+            // /* Use the text as a mask for the background. */
+            // /* This will show the gradient as a text color rather than element bg. */
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: transparent;
+            // -moz-background-clip: text;
+            // -moz-text-fill-color: transparent;
+        }
+    }
+
+    .text-container {
+        display: block;
+        width: 100%;
+        
+        .sub-paragraph {
+            display: block;
+            width: 100%;
+    
+            text-align: center;
+            color: $colorText;
+            font-weight: 100;
+            padding: 1em 0;
+    
+            font-size: 1em;
+            line-height: 1.2em;
+    
+            .email-resalte {
+                color: $colorResalte;
+            }
+        }
+    
+        .container-btn {
+            display: block;
+            width: 100%;
+            padding: 1em 0 0.5em;
+            
+            .contact-btn {
+                display: block;
+                // width: 80%;
+                width: 70%;
+                // max-width: 150px;
+                margin: 0 auto;
+    
+                font-size: 1em;
+                padding: 1em 0.3em;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.contact-pic {
+    display: block;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto 0;
+
+    background: url('../img/ContactPicture.png');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // filter: grayscale(0.8);
+
+    z-index: 5;
+
+    animation: animPicture 2s infinite ease-in-out;
+}
+
+// Keyframes
+
+
+// Media Queries
+
+@media (orientation: landscape) {
+    .main-container {
+        flex-direction: row;
+        
+        .text-container {
+            width: 55%;
+
+            .sub-paragraph {
+                text-align: left;
+                font-size: 0.95em;
+            }
+        }
+    }
+
+    .contact-pic {
+        width: 45%;
+        min-height: 70vh;
+    }
+}
+
+// Iphone 6/7/8
+@media (min-width: $breakOneWidth) and (min-height: $breakOneHeight) {
+}
+
+// Iphone 6/7/8 Landscape
+@media (min-width: $breakOneHeight) and (min-height: $breakOneWidth) and (orientation: landscape) {
+}
+
+
+// Iphone 6/7/8 Plus
+@media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
+}
+
+// Iphone X
+@media (min-width: $breakThreeWidth) and (min-height: $breakThreeHeight) {
+}
+
+
+// Iphone X Landscape
+@media (min-width:$breakThreeHeight) and (min-height: $breakThreeWidth) and (orientation: landscape){
+    .main-container {
+        .text-container {
+            .sub-paragraph {
+                font-size: 1.05em;
+            }
+        }
+    }
+}
+
+
+// Ipad
+@media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
+    .main-container {
+        .text-container {
+            .sub-paragraph {
+                padding: 3em 0 2em;
+                font-size: 1.6em;
+            }
+
+            .container-btn {
+                .contact-btn {
+                    width: 60%;
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Landscape
+@media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
+    .contact-pic {
+        width: 45%;
+        background-position: center;
+    }
+
+    .main-container {
+        .text-container {
+            width: 50%;
+
+            .sub-paragraph {
+                font-size: 1.2em;
+            }
+
+            .container-btn {
+                .contact-btn {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Pro
+@media (min-width: $breakFiveWidth) and (min-height: $breakFiveHeight) {
+    .main-container {
+        .text-container {
+            .sub-paragraph {
+                width: 80%;
+                margin: 0 auto;
+                font-size: 1.8em;
+            }
+
+            .container-btn {
+                .contact-btn {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Pro Landscape
+@media (min-width: $breakFiveHeight) and (min-height: $breakFiveWidth) and (orientation: landscape) {
+    .main-container {
+        .text-container {
+            .sub-paragraph {
+                font-size: 1.7em;
+            }
+
+            .container-btn {
+                .contact-btn {
+                    width: 80%;
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}
+
+// Desktop Big
+@media (min-width: $breakSevenWidth) {
+    .contact-pic {
+        width: 35%;
+    }
+}

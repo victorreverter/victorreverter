@@ -1,0 +1,398 @@
+@import "normalize", "meyer", "basevalues";
+
+.head-container {
+    opacity: 1;
+    top: 0%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    
+    padding: 0 0 0;
+    z-index: 10;
+
+    position: relative;
+
+    .work-title {
+        display: block;
+        width: 95%;
+        padding: 0.8em 0 0.4em;
+
+        text-align: center;
+
+        font-size: 2.2em;
+        font-weight: 500;
+        color: $colorText;
+    }
+
+    .project-selector {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 100%;
+        border-bottom: 3px solid $colorTextAlt;
+
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+
+        .project-category {
+            display: block;
+            width: 35%;
+
+            margin-bottom: -3px;
+            padding: 1em 1em; 
+
+            font-size: 0.9em;
+            text-align: center;
+            color: $colorTextAlt;
+            border-bottom: 3px solid transparent;
+        }
+
+        .project-category-active {
+            color: $colorText;
+            border-bottom: 3px solid $colorText;
+        }
+    }
+}
+
+.type-of-work {
+    display: block;
+    width: 95%;
+
+    margin-left: 0%;
+    padding: 1em 0;
+
+    transition: 0.5s;
+
+    .project-category-block {
+        display: block;
+        width: 100%;
+
+        .title-project-category {
+            display: block;
+            width: 100%;
+            padding: 1em 0;
+
+            font-size: 1.4em;
+            color: $colorText;
+            text-align: left;
+        }
+
+        .gallery {
+            // background: #EEE;
+            .gallery-cell {
+                width: 240px;
+                height: 200px;
+                margin-right: 10px;
+                // background: #8C8;
+                // counter-increment: gallery-cell;            
+            }
+        }
+
+        .project-block {
+            .project-pic {
+                display: block;
+                width: 100%;
+                height: 160px;
+
+                background: red;
+            }
+
+            .project-title {
+                display: block;
+                width: 100%;
+                padding: 0.5em;
+
+                font-size: 1em;
+                color: $colorText;
+            }
+
+            &:hover {
+                .project-title {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        /* cell number */
+        // .gallery-cell:before {
+        //     display: block;
+        //     text-align: center;
+        //     content: counter(gallery-cell);
+        //     line-height: 200px;
+        //     font-size: 80px;
+        //     color: white;
+        // }
+    }
+}
+
+.all-work {
+    display: block;
+    width: 95%;
+
+    margin-left: 0%;
+    padding: 1em 0;
+
+    transition: 0.5s;
+
+    .title-all-work {
+        display: block;
+        width: 100%;
+        padding: 1em 0;
+
+        font-size: 1.4em;
+        color: $colorText;
+        text-align: left;
+    }
+
+    .all-work-project-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        .all-work-project-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            width: 100%;
+    
+            padding: 0 0 1em;
+
+            transition: 0.3s;
+    
+            .project-pic {
+                display: block;
+                width: 100%;
+                height: 225px;
+    
+                background: red;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;                
+            }
+    
+            .project-title {
+                display: block;
+                width: 100%;
+                padding: 0.5em;
+    
+                font-size: 1.2em;
+                color: $colorText;
+            }
+
+            &:hover {
+                .project-title {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .load-more {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        padding: 0.8em 0;
+
+        border: 3px solid $colorResalte;
+        cursor: pointer;
+        
+        h3 {
+            display: block;
+            width: 100%;
+
+            font-size: 1.2em;
+            text-align: center;
+            color: $colorText;
+        }
+
+        &:hover {
+            background: rgba($colorResalte, 0.2);
+        }
+    }
+}
+
+.fading {
+    opacity: 0;
+}
+
+.work-hide {
+    display: none !important;
+}
+
+// Keyframes
+
+
+// Media Queries
+
+@media (orientation: landscape) {
+    .main-container {
+        .work-title {
+            text-align: left;
+            padding: 0.4em 0 0.2em;
+            font-size: 2.6em;
+        }
+
+        .project-selector {
+            .project-category {
+                padding: 1.3em 1em;
+                font-size: 1.1em;
+            }
+        }
+
+        .all-work {
+            .all-work-project-container {
+                .all-work-project-block {
+                    width: 48%;
+                }
+            }
+        } 
+    } 
+}
+
+// Iphone 6/7/8
+@media (min-width: $breakOneWidth) and (min-height: $breakOneHeight) {
+}
+
+// Iphone 6/7/8 Landscape
+@media (min-width: $breakOneHeight) and (min-height: $breakOneWidth) and (orientation: landscape) {
+}
+
+// Iphone 6/7/8 Plus
+@media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
+}
+
+// Iphone 6/7/8 Plus Landscape
+@media (min-width: $breakTwoHeight) and (min-height: $breakTwoWidth) and (orientation: landscape) {
+    .main-container {
+        .work-title {
+            padding: 0.4em 0 0.2em;
+            font-size: 2.4em;
+        }
+
+        .project-selector {
+            justify-content: flex-end;
+            
+            .project-category {
+                width: 25%;
+            }
+        }
+    }
+}
+
+// Iphone X
+@media (min-width: $breakThreeWidth) and (min-height: $breakThreeHeight) {
+}
+
+
+// Iphone X Landscape
+@media (min-width:$breakThreeHeight) and (min-height: $breakThreeWidth) and (orientation: landscape){
+    .main-container {
+        .work-title {
+            padding: 0.4em 0 0.2em;
+            font-size: 2.4em;
+        }
+
+        .project-selector {
+            justify-content: flex-end;
+
+            .project-category {
+                width: 20%;
+            }
+        }
+    }
+}
+
+
+// Ipad
+@media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
+    .main-container {
+        .work-title {
+            text-align: left;
+            padding: 0.4em 0 0.2em;
+            font-size: 2.8em;
+        }
+
+        .project-selector {
+            justify-content: flex-end;
+
+            .project-category {
+                width: 20%;
+                font-size: 1.1em;
+            }
+        }
+
+        .all-work {
+            .all-work-project-container {
+                .all-work-project-block {
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Landscape
+@media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
+    .main-container {
+        .all-work {
+            .all-work-project-container {
+                .all-work-project-block {
+                    width: 31%;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Pro
+@media (min-width: $breakFiveWidth) and (min-height: $breakFiveHeight) {
+    .main-container {
+        .all-work {
+            .all-work-project-container {
+                .all-work-project-block {
+                    width: 31%;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Pro Landscape
+@media (min-width: $breakFiveHeight) and (min-height: $breakFiveWidth) and (orientation: landscape) {
+    .main-container {
+        .all-work {
+            .all-work-project-container {
+                .all-work-project-block {
+                    width: 31%;
+                    padding: 0 0 2em;
+
+                    .project-pic {
+                        height: 235px;
+                    }
+
+                    .project-title {
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop Big
+@media (min-width: $breakSevenWidth) {
+}

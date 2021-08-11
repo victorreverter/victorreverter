@@ -1,0 +1,576 @@
+@import "normalize", "meyer", "basevalues";
+
+.head-container {
+    opacity: 1;
+    top: 0%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: $maxWidth;
+    // margin: 0 auto;
+    margin: -90px auto -90px;
+    
+    padding: 0 0 0;
+    // position: absolute;
+    // bottom: 0;
+    // left: 50%;
+    // transform: translate(-50%, 0%) scale(0.9);
+    transform: scale(0.9);
+    // opacity: 0;
+    z-index: 10;
+
+    .text-container {
+        display: block;
+        width: 100%;
+
+        .title-block {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+            
+            font-weight: 600;
+            padding: 1.2em 0 0.2em;
+
+            font-size: 1.7em;
+        }
+
+        .subtitle-block {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+
+            font-weight: 100;
+            padding: 0.4em 0 0.2em;
+
+            font-size: 1.1em;
+        }
+
+        .paragraph-block {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+
+            font-weight: 100;
+            padding: 0.4em 0 0.2em;
+
+            font-size: 0.95em;
+            line-height: 1.25em;
+        }
+        
+        .sub-paragraph {
+            display: block;
+            width: 100%;
+    
+            text-align: center;
+            color: $colorText;
+            font-weight: 100;
+            padding: 1em 0;
+    
+            font-size: 1em;
+            line-height: 1.2em;
+    
+            .email-resalte {
+                color: $colorResalte;
+            }
+        }
+    
+        .container-btn {
+            display: block;
+            width: 100%;
+            padding: 1em 0 0.5em;
+            
+            .contact-btn {
+                display: block;
+                // width: 80%;
+                width: 70%;
+                // max-width: 150px;
+                margin: 0 auto;
+    
+                font-size: 1em;
+                padding: 1em 0.3em;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+
+    .skills-container {
+        display: block;
+        width: 100%;
+
+        cursor: pointer;
+
+        .skills-title {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+
+            font-weight: 600;
+            padding: 1.2em 0;
+
+            font-size: 1.7em;
+        }
+
+        .skills-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            width: 100%;
+
+            .skills-item {
+                margin: 0.4em 0.8em 0.4em 0;
+                padding: 0.6em 0.8em;
+
+                color: $colorText;
+                font-size: 1em;
+                font-weight: 500;
+                border: 2px solid $colorText;
+                border-radius: 5px;
+            }
+
+            .skills-item-active {
+                background: $colorResalte;
+                color: $colorText;
+            }
+        }
+    }
+
+    .specs-container {
+        display: block;
+        width: 100%;
+
+        cursor: pointer;
+        transition: 0.5s;
+
+        .specs-title {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+
+            font-weight: 600;
+            padding: 1.2em 0;
+
+            font-size: 1.7em;
+        }
+
+        .specs-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            width: 100%;
+
+            .specs-item {
+                display: block;
+                width: 100%;
+                margin: 0.4em 0;
+                padding: 3em 0.8em;
+                
+                font-size: 1.3em;
+                font-weight: 500;
+                text-align: center;
+                
+                color: $colorResalte;
+                border: 2px solid $colorText;
+                border-radius: 5px;
+            }   
+        }
+    }
+
+    .resume-container {
+        display: block;
+        width: 100%;
+
+        .resume-title-block {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+
+            font-weight: 600;
+            padding: 1.2em 0 0.2em;
+
+            font-size: 1.7em;
+        }
+
+        .resume-paragraph-block {
+            display: block;
+            width: 100%;
+            text-align: left;
+            color: $colorText;
+
+            font-weight: 100;
+            padding: 0.4em 0 0.2em;
+
+            font-size: 0.95em;
+            line-height: 1.25em;
+        }
+
+        .resume-btn-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            
+            width: 100%;
+            padding: 1em 0 0.5em;
+
+            .resume-btn {
+                display: block;
+                width: 45%;
+
+                font-size: 1em;
+                padding: 1em 0;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.contact-pic {
+    display: block;
+    width: 100%;
+    min-height: 50vh;
+    margin: 0 auto 0;
+
+    background: url('../img/AboutPicture.png');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    // filter: grayscale(0.8);
+
+    z-index: 5;
+
+    animation: animPicture 2s infinite ease-in-out;
+}
+
+// Keyframes
+
+
+// Media Queries
+
+@media (orientation: landscape) {
+    .main-container {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        // margin: -90px auto 0;
+        
+        .text-container {
+            width: 55%;
+        }
+    }
+
+    .contact-pic {
+        width: 45%;
+        min-height: 70vh;
+    }
+}
+
+// Iphone 6/7/8
+@media (min-width: $breakOneWidth) and (min-height: $breakOneHeight) {
+}
+
+// Iphone 6/7/8 Landscape
+@media (min-width: $breakOneHeight) and (min-height: $breakOneWidth) and (orientation: landscape) {
+}
+
+
+// Iphone 6/7/8 Plus
+@media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
+}
+
+// Iphone 6/7/8 Plus Landscape
+@media (min-width: $breakTwoHeight) and (min-height: $breakTwoWidth) and (orientation: landscape) {
+    .main-container {
+        margin: -60px auto 0;
+
+        .specs-container {
+            .specs-block {
+                .specs-item {
+                    width: 26%;
+                }
+            } 
+        }
+        
+        .resume-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .resume-paragraph-block {
+                width: 50%;
+            }
+
+            .resume-btn-container {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// Iphone X
+@media (min-width: $breakThreeWidth) and (min-height: $breakThreeHeight) {
+}
+
+
+// Iphone X Landscape
+@media (min-width:$breakThreeHeight) and (min-height: $breakThreeWidth) and (orientation: landscape){
+    .main-container {
+        margin: -60px auto 0;
+
+        .specs-container {
+            .specs-block {
+                .specs-item {
+                    width: 26%;
+                }
+            }
+        }
+        
+        .resume-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+    
+            .resume-paragraph-block {
+                width: 48%;
+            }
+    
+            .resume-btn-container {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+// Ipad
+@media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
+    .main-container {
+        .text-container {
+            .title-block {
+                font-size: 1.9em;
+            }
+            .subtitle-block {
+                font-size: 1.4em;
+            }
+            .paragraph-block {
+                font-size: 1.1em;
+            }
+        }
+
+        .specs-container {
+            .specs-block {
+                .specs-item {
+                    width: 26%;
+                }
+            }
+        }
+
+        .resume-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .resume-title-block {
+                padding: 1.2em 0 0.8em;
+            }
+
+            .resume-paragraph-block {
+                width: 48%;
+                font-size: 1.1em;
+            }
+
+            .resume-btn-container {
+                width: 50%;
+
+                .resume-btn {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Landscape
+@media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
+    .contact-pic {
+        width: 45%;
+        background-position: center;
+    }
+
+    .main-container {
+        margin: -60px auto -60px;
+
+        .text-container {
+            width: 50%;
+
+            .title-block {
+                font-size: 1.9em;
+            }
+
+            .subtitle-block {
+                font-size: 1.4em;
+            }
+
+            .paragraph-block {
+                font-size: 1.1em;
+            }
+        }
+
+        .specs-container {
+            .specs-block {
+                .specs-item {
+                    padding: 4em 0.8em;
+                }
+            }
+        }
+        
+        .resume-container {
+            .resume-paragraph-block {
+                font-size: 1.1em;
+            }
+
+            .resume-btn-container {
+                width: 50%;
+
+                .resume-btn {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Pro
+@media (min-width: $breakFiveWidth) and (min-height: $breakFiveHeight) {
+    .main-container {
+        .text-container {
+            .title-block {
+                font-size: 2.4em;
+            }
+            .subtitle-block {
+                font-size: 1.8em;
+            }
+            .paragraph-block {
+                font-size: 1.3em;
+                line-height: 1.5em;
+            }
+        }
+
+        .skills-container {
+            .skills-title {
+                font-size: 2.4em;
+            }
+
+            .skills-block {
+                .skills-item {
+                    font-size: 1.4em;
+                    border: 4px solid $colorText;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .specs-container {
+            .specs-block {
+                .specs-item {
+                    font-size: 1.7em;
+                    padding: 3.4em 0.8em;
+                    border: 4px solid $colorText;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .resume-container {
+            .resume-title-block {
+                font-size: 2.4em;
+            }
+
+            .resume-paragraph-block {
+                font-size: 1.3em;
+                line-height: 1.5em;
+            }
+
+            .resume-btn-container {
+                .resume-btn {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+// Ipad Pro Landscape
+@media (min-width: $breakFiveHeight) and (min-height: $breakFiveWidth) and (orientation: landscape) {
+    .main-container {
+        .text-container {
+            .title-block {
+                font-size: 2.4em;
+            }
+
+            .subtitle-block {
+                font-size: 1.8em;
+            }
+
+            .paragraph-block {
+                font-size: 1.3em;
+                line-height: 1.5em;
+            }
+        }
+
+        .skills-container {
+            .skills-block {
+                .skills-item {
+                    font-size: 1.2em;
+                }
+            }
+        } 
+
+        .resume-container {
+            .resume-title-block {
+                font-size: 2.4em;
+            }
+
+            .resume-paragraph-block {
+                font-size: 1.3em;
+                line-height: 1.5em;
+            }
+
+            .resume-btn-container {
+                .resume-btn {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+// Desktop Big
+@media (min-width: $breakSevenWidth) {
+    .contact-pic {
+        width: 35%;
+    }
+}

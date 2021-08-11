@@ -1,0 +1,47 @@
+$white: #ffffff;
+$black: #000B19;
+
+$colorResalte: #E94560;
+$colorGradient: #8E2CFF;
+
+$colorResalte2: #972EEF;
+
+$colorText: #e2e2e2;
+$colorTextAlt: #898989;
+$colorMenuText: $colorTextAlt;
+$colorTextGray: darken($white, 40%);
+
+$whiteBg: url('../img/WhiteBg.png');
+$darkBg: url('../img/DarkBg.png');
+$resalteBg: url('../img/ResalteBg.png');
+
+$maxWidth: 1280px;
+
+
+// Iphone 6/7/8
+$breakOneWidth: 375px;
+$breakOneHeight: 667px;
+
+// Iphone 6/7/8 Plus
+$breakTwoWidth: 414px;
+$breakTwoHeight: 736px;
+
+// Iphone X
+$breakThreeWidth: 375px;
+$breakThreeHeight: 812px;
+
+// Ipad
+$breakFourWidth: 768px;
+$breakFourHeight: 1024px;
+
+// Ipad Pro
+$breakFiveWidth: 1024px;
+$breakFiveHeight: 1366px;
+
+// Desktop Mini
+$breakSixWidth: 1024px;
+$breakSixHeight: 768px;
+
+// Desktop Big
+$breakSevenWidth: 1280px;
+$breakSevenHeight: 768px;

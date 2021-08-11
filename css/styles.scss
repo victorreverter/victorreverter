@@ -1,0 +1,580 @@
+@import "normalize", "meyer", "basevalues";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+
+html, body {
+    display: block;
+    width: 100%;
+    min-height: 100vh !important;
+    // background: $black;
+    background: $darkBg;
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+.wrap {
+    font-family: 'Noto Sans JP', sans-serif !important;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.head-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 95%;
+    max-width: $maxWidth;
+
+    padding: 0.5em 0;
+
+    // position: absolute;
+    // top: 0;
+    // left: 50%;
+    // transform: translate(-50%, 0%);
+
+    margin: 0 auto;
+    z-index: 30;
+
+    .logo-home svg {
+        width: 55px;
+        height: 55px;
+    }
+
+    .menus-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    // Menu Mobile
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        // border: 3px solid $white;
+        z-index: 100;
+
+        .menu-btn-burguer {
+            width: 40px;
+            height: 4px;
+            background: $white;
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 4px;
+                background: $white;
+                border-radius: 5px;
+                transition: all .5s ease-in-out;
+            }
+
+            &::before {
+                transform: translateX(10px) translateY(-10px);
+            }
+
+            &::after {
+                transform: translateX(10px) translateY(10px);
+            }
+        }
+    }
+
+    // Menu Desktop
+    .desktop-menu {
+        display: none;
+
+        .link-menu-desktop {
+            padding: 0.5em;
+            font-size: 1.3em;
+            color: $colorMenuText;
+            text-decoration: none;
+
+            &:hover {
+                color: $colorText;
+            }
+        }
+
+        .l-m-d-active {
+            color: $colorText;
+        }
+    }
+
+    // Animation of Menu
+    .menu-btn.open .menu-btn-burguer {
+        transform: translateX(-45px);
+        background: transparent;
+
+        &::before {
+            transform: rotate(45deg) translate(40px, -40px);
+        }
+
+        &::after {
+            transform: rotate(-45deg) translate(40px, 40px);
+        }
+    }
+
+    .bulb {
+        width: 24px;
+        height: 55px;
+
+        margin: 0 0 0 10px;
+        background: red;
+    }
+
+    .light-bulb {
+        background: url('../img/BulbLight.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .dark-bulb {
+        background: url('../img/DarkBg.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.menu-options {
+    display: block;
+    width: 100%;
+    height: 100vh;
+
+    // background: $black;
+    background: $darkBg;
+    background-repeat: repeat;
+    background-size: 100%;
+
+    transition: .5s;
+
+    position: absolute;
+    top: 0;
+    left: -110%;
+    transform: translate(0, 0);
+    z-index: 20;
+
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 90%;
+
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+        transition: .6s ease-in-out;
+
+        .link-menu {
+            font-size: 1.7em;
+            font-weight: 500;
+
+            margin: 0.6em 0;
+            color: $colorMenuText;
+            // background: $white;
+            // -webkit-background-clip: text;
+            // -webkit-text-fill-color: $colorText;
+            
+            
+            transition: .25s ease-in-out;
+
+            &:hover {
+                color: $colorText;
+                // background: -webkit-linear-gradient(300deg, $colorResalte, $colorGradient);
+                // -webkit-background-clip: text;
+                // -webkit-text-fill-color: transparent;
+                // border-width: 3px;
+                // border-style: solid;
+                // border-image: linear-gradient($colorResalte, $colorGradient) 1 100%;
+                transition: .1s ease-in-out;
+            }
+        }
+
+        .selected {
+            color: $colorText;
+            border-bottom: 4px solid $white;            
+            transition: .25s ease-in-out;
+        }
+        
+        .l-m-m-active {
+            color: $colorText;
+        }
+    }
+
+}
+
+.menu-mobile-open {
+    left: 0%;
+
+    .links-container {
+        // top: 50%;
+        opacity: 1;
+        transition: .6s ease-in-out;
+    }
+
+
+}
+
+.btn-gradient {
+    border: none;
+    display: inline-block;
+    // border-radius: 99px;
+    color: white;
+    border: 3px solid $colorResalte;
+    position: relative;
+    z-index: 1;
+
+    transition: 0.3s ease-in-out;
+
+    // font-size: 1em;
+    // padding: 17px 35px;
+
+    cursor: pointer;
+
+    &:hover {
+        background: rgba($colorResalte,0.2);
+    }
+
+    // &:before, &:after {
+    //     content: ' ';
+    //     position: absolute;
+    //     border-radius: 99px;
+    // }
+
+    // &:before {
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     z-index: -2;
+    //     background: $colorResalte;
+    //     background: -moz-linear-gradient(300deg, $colorResalte 0%, $colorGradient 100%);
+    //     background: -webkit-gradient(linear, left top, right top, color-stop(0%, $colorResalte), color-stop(100%, #269cc1));
+    //     background: -webkit-linear-gradient(300deg, $colorResalte 0%, $colorGradient 100%);
+    //     background: -o-linear-gradient(300deg, $colorResalte 0%, $colorGradient 100%);
+    //     background: -ms-linear-gradient(300deg, $colorResalte 0%, $colorGradient 100%);
+    //     background: linear-gradient(300deg, $colorGradient, $colorResalte);
+    //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E94560', endColorstr='#8E2CFF', GradientType=1);
+    // }
+
+    // &:after {
+    //     top: 2px;
+    //     bottom: 2px;
+    //     left: 2px;
+    //     right: 2px;
+    //     // background-color: black;
+    //     background: $black;
+    //     z-index: -1;
+    //     opacity: 1;
+    //     transition: all 0.24s ease-in-out;
+    // }
+
+    // &:hover:after {
+    //     opacity: 0;
+    // }
+}
+
+.regular-container {
+    display: block;
+    width: 100%;
+    // min-height: 100vh;
+    // position: relative;
+}
+
+.sub-category-container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    // background: rgb(39, 39, 39);
+
+    .title-sub {
+        display: block;
+        width: 100%;
+
+        // /* Create the gradient. */
+        // background-image: linear-gradient(300deg, $colorGradient, $colorResalte);
+
+        // /* Use the text as a mask for the background. */
+        // /* This will show the gradient as a text color rather than element bg. */
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // -moz-background-clip: text;
+        // -moz-text-fill-color: transparent;
+    }
+
+    .subtitle-sub {
+        width: 100%;
+        color: $colorText;
+        font-weight: 100;
+    }
+}
+
+.scroll-indicator {
+    display: block;
+    width: 20px;
+    height: 40px;
+
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    border: 2px solid $white;
+    border-radius: 15px;
+
+    .ball-indicator {
+        display: block;
+        width: 7px;
+        height: 7px;
+
+        background: $white;
+        border-radius: 10px;
+
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        animation: animateScrollIndicator 1s infinite ease-in-out;
+    }
+}
+
+// Footer
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 95%;
+    max-width: 1280px;
+    // max-width: 375px;
+    margin: 0 auto;
+    padding: 2em 0;
+
+    .container-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        padding: 0.5em 0;
+
+        a {
+            font-size: 1em;
+            color: $colorText;
+            font-weight: 100;
+        }
+    }
+
+    .copyright {
+        font-size: 1em;
+        color: $colorText;
+        font-weight: 100;
+
+        padding: 1em 0 0.5em;
+    }
+}
+
+// Keyframes
+
+// Media Queries
+
+// Iphone 6/7/8 Plus Landscape
+@media (min-width: $breakOneHeight) and (min-height:$breakOneWidth) and (orientation: landscape) {
+    #footer {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+        .container-links {
+            width: 50%;
+        }
+
+        .copyright {
+            padding: initial;
+        }
+    } 
+}
+
+// Iphone X Landscape
+@media (min-width: $breakThreeHeight) and (min-height:$breakThreeWidth) and (orientation: landscape) {    
+    #footer {
+        .container-links {
+            width: 35%;
+        }
+    }
+}
+
+// Ipad
+@media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
+    html, body {
+        background-size: 60%;
+    }
+
+    .left-panel, .right-panel {
+        background-size: 120% !important;
+    }
+
+    .head-container{
+        .logo-home svg {
+            width: 75px;
+            height: 75px;
+        }
+
+        .desktop-menu {
+            display: block;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+    }
+
+    #footer {
+        padding: 4em 0 2em;
+
+        .container-links a {
+            font-size: 1.4em;
+        }
+
+        .copyright {
+            font-size: 1.4em;
+        }
+    } 
+}
+
+// Ipad - Landscape
+@media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
+    html, body {
+        background-size: 50%;
+    }
+
+    .left-panel, .right-panel {
+        background-size: 100% !important;
+    }
+
+    .head-container .logo-home svg {
+        width: 85px;
+        height: 85px;
+    }
+
+    .head-container .desktop-menu {
+        display: block;
+    }
+
+    .head-container .menu-btn {
+        display: none;
+    }
+
+    #footer {
+        padding: 5em 0 2em;
+
+        .container-links {
+            width: 30%;
+        }
+    } 
+}
+
+// Ipad Pro
+@media (min-width: $breakFiveWidth) and (min-height: $breakFiveHeight) {
+    html, body {
+        background-size: 50%;
+    }
+
+    .left-panel, .right-panel {
+        background-size: 100% !important;
+    }
+
+    .head-container .logo-home svg {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .head-container .desktop-menu .link-menu-desktop {
+        font-size: 1.6em;
+    }
+
+    #footer {
+        padding: 8em 0 2em;
+
+        .container-links a{
+            font-size: 1.7em;
+        }
+
+        .copyright {
+            font-size: 1.7em;
+        }
+    }
+}
+
+// Ipad Pro Landscape
+@media (min-width: $breakFiveHeight) and (min-height: $breakFiveWidth) and (orientation: landscape) {
+
+    .head-container .desktop-menu .link-menu-desktop {
+        font-size: 1.8em;
+    }
+
+    #footer {
+        padding: 9em 0 2em;
+
+        .container-links {
+            width: 30%;
+
+            a {
+                font-size: 1.7em;
+            }
+        } 
+
+        .copyright {
+            font-size: 1.7em;
+        }
+    }
+}
+
+// Desktop Big
+@media (min-width: $breakSevenWidth) {
+    html, body {
+        background-size: 35%;
+    }
+
+    .left-panel, .right-panel {
+        background-size: 70% !important;
+    }
+
+    #footer {
+        .container-links {
+            width: 25%;
+
+            a {
+                font-size: 1.2em;
+            }
+        }
+
+        .copyright {
+            font-size: 1.2em;
+        }
+    }
+}
