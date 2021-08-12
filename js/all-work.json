@@ -1,5 +1,15 @@
 {"allWork": [
   {
+    "id": "grid-periodic-table",
+    "title": "Grid Periodic Table",
+    "link": "works/grid-periodic-table/grid-periodic-table.html"
+  },
+  {
+    "id": "yorapp",
+    "title": "YOR App",
+    "link": "works/yorapp/yorapp.html"
+  },
+  {
     "id": "wiki-searcher",
     "title": "Wikipedia Searcher",
     "link": "works/wiki-searcher/wiki-searcher.html"
