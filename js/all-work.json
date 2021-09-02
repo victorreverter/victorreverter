@@ -1,5 +1,10 @@
 {"allWork": [
   {
+    "id": "covid19-app",
+    "title": "Covid19 App",
+    "link": "works/covid19-app/covid19-app.html"
+  },
+  {
     "id": "grid-periodic-table",
     "title": "Grid Periodic Table",
     "link": "works/grid-periodic-table/grid-periodic-table.html"
