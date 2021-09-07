@@ -1,5 +1,10 @@
 {"allWork": [
   {
+    "id": "strava-state-of-2021",
+    "title": "Strava State of 2021",
+    "link": "works/strava-state-of-2021/strava-state-of-2021.html"
+  },
+  {
     "id": "covid19-app",
     "title": "Covid19 App",
     "link": "works/covid19-app/covid19-app.html"
