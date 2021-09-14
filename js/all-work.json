@@ -1,5 +1,10 @@
 {"allWork": [
   {
+    "id": "cohiba",
+    "title": "Cohiba",
+    "link": "works/cohiba/cohiba.html"
+  },
+  {
     "id": "strava-state-of-2021",
     "title": "Strava State of 2021",
     "link": "works/strava-state-of-2021/strava-state-of-2021.html"
