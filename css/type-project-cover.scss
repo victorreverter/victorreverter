@@ -82,6 +82,15 @@
     transition: 0.3s;
 }
 
+#spain-brand {
+    background: url('../img/Project-Cover/Spain-Brand.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: 0.3s;
+}
+
 
 // Campaigns
 #havana500 {
@@ -101,6 +110,34 @@
 
     transition: 0.3s;
 }
+
+#beats {
+    background: url('../img/Project-Cover/Beats.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: 0.3s;
+}
+
+#laliga {
+    background: url('../img/Project-Cover/LaLiga.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: 0.3s;
+}
+
+#classic-film-festival {
+    background: url('../img/Project-Cover/ClassicFilmFestival.png');
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: 0.3s;
+}
+
 
 //Data Visualization
 #strava-state-of-2021{
