@@ -77,7 +77,7 @@
 }
 
 .logoVeilOut {
-    transition: .9s;
+    transition: 1.2s; //0.9s
     left: -60%;
 }
 
@@ -97,12 +97,13 @@
     top: 50%;
     left: 0%;
     transform: translate(0%, -50%);
+    animation: animLeftSide 3s forwards ease-in-out;
 }
 
-.leftPanelOut {
-    transition: 0.5s;
-    left: -60%;
-}
+// .leftPanelOut {
+//     transition: 0.7s;
+//     left: -60%;
+// }
 
 .right-panel {
     // background-color: $colorGradient;
@@ -115,12 +116,13 @@
     top: 50%;
     right: 0%;
     transform: translate(0%, -50%);
+    animation: animRightSide 3s forwards ease-in-out;
 }
 
-.rightPanelOut {
-    transition: 0.7s;
-    right: -60%;
-}
+// .rightPanelOut {
+//     transition: 0.5s;
+//     right: -60%;
+// }
 
 .main-container {
     display: flex;
@@ -157,7 +159,7 @@
 
                 .sub-span {
                     color: $colorResalte2;
-                    animation: animateName 2s infinite ease-in-out;
+                    animation: animateName 5s infinite ease-in-out;
                 }
             }
             // /* Create the gradient. */
@@ -248,13 +250,51 @@
     }
 }
 
+// @keyframes animateName {
+//     0%{
+//         color: $colorResalte;
+//     }
+//     50% {
+//         color: $colorGradient;
+//     }
+//     100% {
+//         color: $colorResalte;
+//     }
+// }
+
 @keyframes animateName {
-    0%{
+    0% {
         color: $colorResalte;
     }
-    50% {
-        color: $colorGradient;
+
+    10% {
+        color: $colorResalte2;
     }
+
+    20% {
+        color: $colorResalte3;
+    }
+
+    30% {
+        color: $colorResalte4;
+    }
+
+    50% {
+        color: $colorResalte5;
+    }
+
+    70% {
+        color: $colorResalte4;
+    }
+
+    80% {
+        color: $colorResalte3;
+    }
+
+    90% {
+        color: $colorResalte2;
+    }
+
     100% {
         color: $colorResalte;
     }
@@ -269,6 +309,33 @@
     }
     100% {
         transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+// New animation Set ==================
+@keyframes animLeftSide {
+    0% {
+        left: 0%;
+    }
+    60% {
+        left: 0%;
+    }
+    100% {
+        left: -60%;
+    }
+}
+
+@keyframes animRightSide {
+    0% {
+        right: 0%;
+    }
+
+    70% {
+        right: 0%;
+    }
+
+    100% {
+        right: -60%;
     }
 }
 

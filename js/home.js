@@ -9,8 +9,8 @@ const mainContainer = document.querySelector('.main-container');
 
 setTimeout(() => {
     logoVeil.classList.add('logoVeilOut');
-    leftPanel.classList.add('leftPanelOut');
-    rightPanel.classList.add('rightPanelOut');
+    // leftPanel.classList.add('leftPanelOut');
+    // rightPanel.classList.add('rightPanelOut');
     
     setTimeout(() => {
         headContainer.classList.add('headContainerIn');
@@ -19,5 +19,5 @@ setTimeout(() => {
 
     setTimeout(() => {
         veilLayer.classList.add('veilLayerOut');
-    }, 200);
-}, 3500);
+    }, 3000);
+}, 2000);
