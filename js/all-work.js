@@ -14,11 +14,14 @@ $.getJSON(graphicUrl, function(data){
 
   var graphicProject = '';
 
-  for(var i = 0; i < 6; i++){
+  for(var i = 0; i < 8; i++){
 
     graphicProject += '<div class="all-work-project-block">';
     graphicProject += '<a href="' + baseData[i].link + '" id="' + baseData[i].id + '" class="project-pic"></a>';
-    graphicProject += '<h3 class="project-title">' + baseData[i].title + '</h3>'
+    graphicProject += '<div class="text-pro-container">';
+    graphicProject += '<h3 class="project-title">' + baseData[i].title + '</h3>';
+    graphicProject += '<h5 class="category-title">' + baseData[i].category + '</h5>';
+    graphicProject += '</div>';
     graphicProject += '</div>';
 
     $('#allWorkProjectContainer').html(graphicProject);
@@ -27,12 +30,12 @@ $.getJSON(graphicUrl, function(data){
 }).done(function(data){
   // console.log(data.graphics);
   var baseData = data.allWork;
-  var workTotal = 6;
+  var workTotal = 8;
 
   $('#loadMore').on('click', function(){
 
     var graphicProject = '';
-    var counter = workTotal + 4;
+    var counter = workTotal + 2;
     // console.log(workTotal);
     // console.log(workTotal + 3);
 
@@ -45,7 +48,10 @@ $.getJSON(graphicUrl, function(data){
 
         graphicProject += '<div class="all-work-project-block">';
         graphicProject += '<a href="' + baseData[j].link + '" id="' + baseData[j].id + '" class="project-pic"></a>';
-        graphicProject += '<h3 class="project-title">' + baseData[j].title + '</h3>'
+        graphicProject += '<div class="text-pro-container">';
+        graphicProject += '<h3 class="project-title">' + baseData[j].title + '</h3>';
+        graphicProject += '<h5 class="category-title">' + baseData[j].category + '</h5>';
+        graphicProject += '</div>';
         graphicProject += '</div>';
 
         $('#allWorkProjectContainer').append(graphicProject);

@@ -21,7 +21,7 @@
     // left: 50%;
     // transform: translate(-50%, 0%) scale(0.9);
     transform: scale(0.9);
-    // opacity: 0;
+    opacity: 0;
     z-index: 10;
 
     .text-container {
@@ -176,8 +176,8 @@
             .specs-item {
                 display: block;
                 width: 100%;
-                margin: 0.4em 0;
-                padding: 3em 0.8em;
+                margin: 0.4em auto 0;
+                padding: 4em 0.8em;
                 
                 font-size: 1.3em;
                 font-weight: 500;
@@ -244,8 +244,8 @@
 .contact-pic {
     display: block;
     width: 100%;
-    min-height: 50vh;
-    margin: 0 auto 0;
+    min-height: 75vh;
+    margin: -10vh auto 0;
 
     background: url('../img/AboutPicture.png');
     background-position: top center;
@@ -274,11 +274,15 @@
         .text-container {
             width: 55%;
         }
+
+        .specs-container .specs-block .specs-item {
+            max-width: 270px;
+        }
     }
 
     .contact-pic {
         width: 45%;
-        min-height: 70vh;
+        min-height: 120vh;
     }
 }
 
@@ -293,6 +297,9 @@
 
 // Iphone 6/7/8 Plus
 @media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
+    .main-container .specs-container .specs-block .specs-item {
+        padding: 5em 0.8em;
+    }
 }
 
 // Iphone 6/7/8 Plus Landscape
@@ -571,6 +578,8 @@
 // Desktop Big
 @media (min-width: $breakSevenWidth) {
     .contact-pic {
-        width: 35%;
+        // width: 35%;
+        width: 45%;
+        // min-height: 100vh;
     }
 }

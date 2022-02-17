@@ -133,14 +133,14 @@
     max-width: $maxWidth;
     margin: 0 auto;
     
-    padding: 4em 0 0;
+    padding: 0.8em 0 0;
+    // padding: 4em 0 0;
     // position: absolute;
     // bottom: 0;
     // left: 50%;
     // transform: translate(-50%, 0%) scale(0.9);
     transform: scale(0.9);
     opacity: 0;
-    z-index: 10;
 
     .title-container {
         width: 100%;
@@ -197,6 +197,7 @@
             // width: 80%;
             width: 70%;
             // max-width: 150px;
+            max-width: 265px;
             margin: 0 auto;
 
             font-size: 1em;
@@ -231,7 +232,8 @@
     background-repeat: no-repeat;
     // filter: grayscale(0.8);
 
-    z-index: 5;
+    // z-index: 5;
+    z-index: 0;
 
     // animation: animPicture 2s infinite ease-in-out;
 }
@@ -342,6 +344,11 @@
 // Media Queries
 
 @media (orientation: landscape) {
+    .right-panel,
+    .left-panel {
+        background-size: 130%;
+    }
+
     .main-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -362,7 +369,8 @@
 // Iphone 6/7/8
 @media (min-width: $breakOneWidth) and (min-height: $breakOneHeight) {
     .victor-picture {
-        min-height: 65vh;
+        // min-height: 65vh;
+        min-height: 55vh;
     }
 
     .main-container .sub-paragraph {
@@ -391,7 +399,8 @@
 // Iphone 6/7/8 Plus
 @media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
     .victor-picture {
-        min-height: 70vh;
+        // min-height: 70vh;
+        min-height: 60vh;
     }
 }
 
@@ -403,11 +412,27 @@
 
     .victor-picture {
         margin: -3vh auto 0;
+        min-height: 60vh;
+    }
+}
+
+// Iphone X Landscape
+@media (min-width: $breakThreeHeight) and (min-height:$breakThreeWidth) and (orientation: landscape) {
+    .right-panel,
+    .left-panel {
+        background-size: 110%;
+    }
+
+    .main-container .victor-picture {
+        margin: -20vh auto 0;
+        min-height: 100vh;
+        background-size: 100%;
     }
 }
 
 // Ipad
 @media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
+        
     .main-container {
         .title-container h3 {
             font-size: 5em;
@@ -424,8 +449,10 @@
         }
 
         .victor-picture {
-            min-height: 50vh;
-            background-size: 70%;
+            // min-height: 50vh;
+            // background-size: 70%;
+            min-height: 55vh;
+            background-size: 60%;
         }
     } 
 }
@@ -450,6 +477,7 @@
         .victor-picture {
             margin: -3vh auto 0;
             min-height: 90vh;
+            background-size: 100%;
         }
     }
 }
@@ -457,6 +485,8 @@
 // Ipad Pro
 @media (min-width: $breakFiveWidth) and (min-height: $breakFiveHeight) {
     .main-container {
+        padding: 3em 0 0;
+        
         .victor-picture {
             margin: 0vh auto 0;
             min-height: 60vh;
@@ -485,7 +515,15 @@
         .victor-picture {
             margin: 0vh auto 0;
             min-height: 90vh;
-            background-size: 110%;
+            // background-size: 110%;
+            background-size: 100%;
         }
+    }
+}
+
+// Desktop Big
+@media (min-width: $breakSevenWidth) {
+    .victor-picture {
+        background-size: 85%;
     }
 }

@@ -3,6 +3,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
+// Scrollbar
+body::-webkit-scrollbar {
+    width: 0.25em;
+    background: $black;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $colorResalte;
+    outline: 1px solid $black;
+}
 
 html, body {
     display: block;
@@ -14,6 +28,8 @@ html, body {
     background-size: 100%;
 }
 
+// General Styles
+
 .wrap {
     font-family: 'Noto Sans JP', sans-serif !important;
     position: relative;
@@ -23,6 +39,51 @@ html, body {
 
 a {
     text-decoration: none;
+}
+
+.veil-standard {
+    display: block;
+    width: 105%;
+    min-height: 105vh;
+
+    background: $darkBg;
+    background-repeat: repeat;
+    background-size: 100%;
+
+    // opacity: 0.5;
+
+    // position: absolute;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 1000;
+
+    h1 {
+        display: block;
+        width: 90%;
+        font-size: 2em;
+        line-height: 1.8em;
+        color: $colorText;
+        
+        // text-decoration: underline;
+
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.closeVeilOut {
+    transition: 1.2s;
+    left: -60%;
+    position: absolute;
+
+    h1 {
+        transition: 1s;
+        opacity: 0;
+    }
 }
 
 .head-container {
@@ -398,9 +459,25 @@ a {
     }
 }
 
+// Special Classes
+.visible-elem {
+    transition: 0.5s !important;
+    opacity: 1 !important;
+}
+
 // Keyframes
 
 // Media Queries
+
+@media (orientation: landscape) {
+    html, body, .veil-standard {
+        background-size: 70%;
+    }
+
+    .menu-options {
+        background-size: 70%;
+    }
+}
 
 // Iphone 6/7/8 Plus Landscape
 @media (min-width: $breakOneHeight) and (min-height:$breakOneWidth) and (orientation: landscape) {
@@ -421,6 +498,14 @@ a {
 
 // Iphone X Landscape
 @media (min-width: $breakThreeHeight) and (min-height:$breakThreeWidth) and (orientation: landscape) {    
+    html, body, .veil-standard {
+        background-size: 60%;
+    }
+
+    .menu-options {
+        background-size: 60%;
+    }
+    
     #footer {
         .container-links {
             width: 35%;
@@ -430,8 +515,12 @@ a {
 
 // Ipad
 @media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
-    html, body {
+    html, body, .veil-standard {
         background-size: 60%;
+    }
+
+    .veil-standard h1 {
+        font-size: 4em;
     }
 
     .left-panel, .right-panel {
@@ -468,9 +557,23 @@ a {
 
 // Ipad - Landscape
 @media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
-    html, body {
+    html, body, .veil-standard {
         background-size: 50%;
     }
+
+    .veil-standard {
+        // background-size: 35%;
+        
+        h1 {
+            font-size: 4em;
+        }
+    }
+    
+    // .closeVeilOut {
+    //     transition: 1.6s;
+    //     left: -60%;
+    //     position: absolute;
+    // }
 
     .left-panel, .right-panel {
         background-size: 100% !important;
@@ -500,7 +603,7 @@ a {
 
 // Ipad Pro
 @media (min-width: $breakFiveWidth) and (min-height: $breakFiveHeight) {
-    html, body {
+    html, body, .veil-standard {
         background-size: 50%;
     }
 
@@ -556,7 +659,7 @@ a {
 
 // Desktop Big
 @media (min-width: $breakSevenWidth) {
-    html, body {
+    html, body, .veil-standard {
         background-size: 35%;
     }
 

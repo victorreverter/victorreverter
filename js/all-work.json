@@ -2,101 +2,67 @@
   {
     "id": "spain-brand",
     "title": "Spain Brand",
+    "category": "Branding",
     "link": "works/spain-brand/spain-brand.html"
-  },
-  {
-    "id": "classic-film-festival",
-    "title": "Classic Film Festival",
-    "link": "works/classic-film-festival/classic-film-festival.html"
-  },
-  {
-    "id": "laliga",
-    "title": "La Liga 21|22",
-    "link": "works/laliga-21-22/laliga-21-22.html"
-  },
-  {
-    "id": "beats",
-    "title": "Feel the Beat",
-    "link": "works/beats/beats.html"
   },
   {
     "id": "yerbamategaucho",
     "title": "Yerba Mate Gaucho",
+    "category": "Branding",
     "link": "works/yerbamategaucho/yerbamategaucho.html"
-  },
-  {
-    "id": "cohiba",
-    "title": "Cohiba",
-    "link": "works/cohiba/cohiba.html"
-  },
-  {
-    "id": "strava-state-of-2021",
-    "title": "Strava State of 2021",
-    "link": "works/strava-state-of-2021/strava-state-of-2021.html"
   },
   {
     "id": "euroamerica-2021",
     "title": "Euro America 2021",
+    "category": "Graphic Design",
     "link": "works/euroamerica-2021/euroamerica-2021.html"
   },
   {
     "id": "vr-branding",
     "title": "VR Branding",
+    "category": "Branding",
     "link": "works/vr-branding/vr-branding.html"
   },
   {
     "id": "cuba-branding",
     "title": "Cuba Branding",
+    "category": "Branding",
     "link": "works/cuba-branding/cuba-branding.html"
   },
   {
     "id": "wholezzome",
     "title": "Wholezzome",
+    "category": "Branding",
     "link": "works/wholezzome/wholezzome.html"
+  },
+  {
+    "id": "recap2021",
+    "title": "Recap 2021",
+    "category": "Mixed",
+    "link": "works/recap-2021/recap-2021.html"
   },
   {
     "id": "potusdata",
     "title": "POTUS Data",
+    "category": "Web Design",
     "link": "works/potusdata/potusdata.html"
   },
   {
-    "id": "covid19-app",
-    "title": "Covid19 App",
-    "link": "works/covid19-app/covid19-app.html"
-  },
-  {
-    "id": "museum-series",
-    "title": "Museum Series",
-    "link": "works/museum-series/museum-series.html"
-  },
-  {
-    "id": "shape",
-    "title": "Shape",
-    "link": "works/shape/shape.html"
-  },
-  {
-    "id": "havana500",
-    "title": "Havana500",
-    "link": "works/havana500/havana500.html"
-  },
-  {
-    "id": "grid-periodic-table",
-    "title": "Grid Periodic Table",
-    "link": "works/grid-periodic-table/grid-periodic-table.html"
-  },
-  {
-    "id": "yorapp",
-    "title": "YOR App",
-    "link": "works/yorapp/yorapp.html"
+    "id": "recap2019",
+    "title": "Recap 2019",
+    "category": "Mixed",
+    "link": "works/recap-2019/recap-2019.html"
   },
   {
     "id": "datamovie",
     "title": "Data Movie App",
+    "category": "Web Design",
     "link": "works/datamovie/datamovie.html"
   },
   {
     "id": "wiki-searcher",
     "title": "Wikipedia Searcher",
+    "category": "Web Design",
     "link": "works/wiki-searcher/wiki-searcher.html"
   }
 ]}

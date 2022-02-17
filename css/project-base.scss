@@ -9,6 +9,8 @@
     max-width: $maxWidth;
     margin: 0 auto;
 
+    opacity: 0;
+
     padding: 0 0 0;
     z-index: 10;
 
@@ -51,7 +53,7 @@
 
 .project-cover {
     display: block;
-    width: 95%;
+    width: 100%;
     height: 200px;
 
     background: gray;
@@ -180,37 +182,45 @@
 
     cursor: pointer;
 
-    .title-block {
-        display: block;
+    .texts-next-contain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
 
-        font-size: 1em;
-        color: $colorResalte;
-        padding: 0.5em 0;
+        .title-block {
+            display: block;
+            width: 100%;
+    
+            font-size: 1em;
+            color: $colorResalte;
+            padding: 0.5em 0;
+        }
+    
+        .title-project {
+            display: block;
+            width: 100%;
+    
+            color: $colorText;
+            padding: 0.5em 0;
+    
+            font-size: 1.6em;
+        }
+    
+        .project-description {
+            display: block;
+            width: 100%;
+    
+            color: $colorText;
+            padding: 0.5em 0 2em;
+    
+            font-size: 0.9em;
+            font-weight: 100;
+            line-height: 1.2em;
+            text-align: right;
+        }
     }
 
-    .title-project {
-        display: block;
-        width: 100%;
-
-        color: $colorText;
-        padding: 0.5em 0;
-
-        font-size: 1.6em;
-    }
-
-    .project-description {
-        display: block;
-        width: 100%;
-
-        color: $colorText;
-        padding: 0.5em 0 2em;
-
-        font-size: 0.9em;
-        font-weight: 100;
-        line-height: 1.2em;
-        text-align: right;
-    }
 
     .project-picture {
         display: block;
@@ -218,11 +228,11 @@
         height: 180px;
 
         background: red;
-        background-position: top !important;
+        // background-position: top !important;
 
         &:hover {
             // opacity: 0.8;
-            background-size: 100% !important;
+            background-size: 120% !important;
         }
     }
 }
@@ -239,7 +249,7 @@
 
     .showcase-block {
         .wide-screen {
-            height: 310px;
+            height: 340px;
         }
 
         .semi-wide-screen {
@@ -254,12 +264,26 @@
 
         .vertical-screen {
             width: 48%;
-            height: 420px;
+            height: 460px;
         }
     }
 
     .project-next {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .texts-next-contain {
+            width: 40%;
+
+            .project-description {
+                text-align: left;
+            }
+        }
+
         .project-picture {
+            width: 50%;
             height: 220px;
         }
     }
@@ -267,6 +291,10 @@
 
 // Iphone 6/7/8
 @media (min-width: $breakOneWidth) and (min-height: $breakOneHeight) {
+    .project-cover {
+        height: 250px;
+    }
+    
     .showcase-block {
         .wide-screen,
         .semi-wide-screen {
@@ -276,6 +304,10 @@
         .square-screen {
             height: 350px;
         }
+
+        .vertical-screen {
+            height: 620px;
+        }
     }
 }
 
@@ -283,11 +315,15 @@
 @media (min-width: $breakOneHeight) and (min-height: $breakOneWidth) and (orientation: landscape) {
     .showcase-block {
         .wide-screen {
-            height: 350px;
+            height: 390px;
         }
 
         .semi-wide-screen {
             height: 200px;
+        }
+
+        .vertical-screen {
+            height: 540px;
         }
     }
 
@@ -300,6 +336,12 @@
 
 // Iphone 6/7/8 Plus
 @media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
+    .showcase-block {
+        .vertical-screen {
+            height: 690px;
+        }
+    }
+    
     .project-next {
         .project-picture {
             height: 220px;
@@ -311,7 +353,7 @@
 @media (min-width: $breakTwoHeight) and (min-height: $breakTwoWidth) and (orientation: landscape) {
     .showcase-block {
         .wide-screen {
-            height: 380px;
+            height: 440px;
         }
 
         .semi-wide-screen {
@@ -320,6 +362,10 @@
 
         .square-screen {
             height: 350px;
+        }
+
+        .vertical-screen {
+            height: 590px;
         }
     }
 
@@ -331,28 +377,46 @@
 }
 
 // Iphone X
-@media (min-width: $breakThreeWidth) and (min-height: $breakThreeHeight) {}
+@media (min-width: $breakThreeWidth) and (min-height: $breakThreeHeight) {
+    .project-next {
+        .project-picture {
+            height: 280px;
+        }
+    }
+}
 
 
 // Iphone X Landscape
 @media (min-width:$breakThreeHeight) and (min-height: $breakThreeWidth) and (orientation: landscape) {
     .showcase-block {
+        .wide-screen {
+            height: 490px;
+        }
+
         .square-screen {
             height: 360px;
+        }
+
+        .vertical-screen {
+            height: 650px;
         }
     }
     
     .project-next {
         padding: 2em 0 0;
 
-        .title-project {
-            width: 50%;
-            font-size: 1.8em;
+        .texts-next-contain {
+            .title-project {
+                // width: 50%;
+                font-size: 1.8em;
+            }
+            .project-description {
+                // width: 50%;
+                text-align: left;
+                font-size: 1em;
+            }
         }
-        .project-description {
-            width: 50%;
-            font-size: 1em;
-        }
+
         .project-picture {
             height: 350px;
         }
@@ -364,10 +428,11 @@
 @media (min-width: $breakFourWidth) and (min-height: $breakFourHeight) {
     .main-container {
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         align-items: flex-start;
-        width: 95%;
+        // width: 95%;
         margin: 0 auto;
     }
     
@@ -402,11 +467,11 @@
 
     .project-cover {
         width: 100%;
-        height: 440px;
+        height: 500px;
     }
 
     .description-block {
-        width: 50%;
+        width: 48%;
 
         .title-description, .paragraph-description, .share {
             width: 95%;
@@ -424,7 +489,7 @@
     }
 
     .showcase-block {
-        width: 50%;
+        width: 48%;
 
         .quote-block {
             font-size: 1.2em;
@@ -437,25 +502,27 @@
 
         .vertical-screen {
             width: 48%;
-            height: 300px;
+            height: 340px;
         }
     }
 
     .project-next {
-        width: 100%;
+        // width: 100%;
 
-        .title-project {
-            width: 50%;
-            font-size: 1.8em;
-        }
-
-        .project-description {
-            width: 50%;
-            font-size: 1em;
+        .texts-next-contain {
+            .title-project {
+                width: 100%;
+                font-size: 1.8em;
+            }
+    
+            .project-description {
+                width: 100%;
+                font-size: 1em;
+            }
         }
 
         .project-picture {
-            height: 300px;
+            height: 420px;
         }
     }
 }
@@ -464,10 +531,11 @@
 @media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
     .main-container {
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         align-items: flex-start;
-        width: 95%;
+        // width: 95%;
         margin: 0 auto;
     }
 
@@ -506,7 +574,7 @@
     }
 
     .description-block {
-        width: 50%;
+        width: 48%;
 
         .title-description,
         .paragraph-description,
@@ -525,7 +593,7 @@
     }
 
     .showcase-block {
-        width: 50%;
+        width: 48%;
 
         .quote-block {
             font-size: 1.2em;
@@ -544,12 +612,12 @@
         }
 
         .vertical-screen {
-            height: 400px;
+            height: 440px;
         }
     }
 
     .project-next {
-        width: 100%;
+        // width: 100%;
 
         .title-block {
             font-size: 1.2em;
@@ -614,6 +682,10 @@
         .square-screen {
             height: 240px;
         }
+
+        .vertical-screen {
+            height: 440px;
+        }
     }
 
     .project-next {
@@ -666,19 +738,23 @@
     }
 
     .description-block {
+        width: 50%;
+
         .title-description {
             font-size: 1.5em;
         }
     }
 
     .showcase-block {
+        width: 50%;
+
         .quote-block {
             font-size: 1.4em;
             line-height: 1.6em;
         }
         
         .wide-screen {
-            height: 380px;
+            height: 400px;
         }
         
         .semi-wide-screen {
@@ -690,11 +766,13 @@
         }
 
         .vertical-screen {
-            height: 470px;
+            height: 540px;
         }
     }
 
     .project-next {
+        // width: 100%;
+
         .title-block {
             font-size: 1.2em;
         }
@@ -716,9 +794,35 @@
 
 // Desktop Big
 @media (min-width: $breakSevenWidth) {
-    .showcase-block {
-        .square-screen {
-            height: 300px;
+    .main-container {
+        justify-content: space-between;
+
+        .project-cover {
+            height: 740px;
         }
-    } 
+
+        .description-block {
+            width: 50%;
+        }
+
+        .showcase-block {
+            width: 50%;
+
+            .wide-screen {
+                height: 400px;
+            }
+
+            .square-screen {
+                height: 300px;
+            }
+
+            .vertical-screen {
+                height: 530px;
+            }
+        } 
+    
+        .project-next {
+            width: 100%;
+        }
+    }
 }
