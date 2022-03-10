@@ -1,5 +1,11 @@
 {"allWork": [
   {
+    "id": "posterland",
+    "title": "Posterland",
+    "category": "Web Design",
+    "link": "works/posterland/posterland.html"
+  },
+  {
     "id": "spain-brand",
     "title": "Spain Brand",
     "category": "Branding",
