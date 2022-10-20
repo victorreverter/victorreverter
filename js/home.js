@@ -19,5 +19,5 @@ setTimeout(() => {
 
     setTimeout(() => {
         veilLayer.classList.add('veilLayerOut');
-    }, 3000);
+    }, 100);
 }, 2000);

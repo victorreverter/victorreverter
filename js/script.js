@@ -1,17 +1,17 @@
 // Animate Dark / Light Mode
 
-
 // Footer Activation
 
-const FOOTER = document.querySelector("#footer");
-// const div = document.createElement('div');
+// const FOOTER = document.querySelector("#footer");
+// // const div = document.createElement('div');
 
-FOOTER.innerHTML = `<div class="container-links">
-                <a href="https://www.instagram.com/victorreverter/">Instagram</a>
-                <a href="https://www.behance.net/VictorReverter">Behance</a>
-                <a href="https://www.linkedin.com/in/victor-manuel-herrera-reverter-a9312348/">LinkedIn</a>
-            </div>
-            <div class="copyright">© Victor Reverter Devs 2021</div>`;
+// FOOTER.innerHTML = `<div class="container-links">
+//                 <a href="https://www.instagram.com/victorreverter/">Instagram</a>
+//                 <a href="https://www.behance.net/VictorReverter">Behance</a>
+//                 <a href="https://www.linkedin.com/in/victor-manuel-herrera-reverter-a9312348/">LinkedIn</a>
+//             </div>
+//             <div class="copyright">© Victor Reverter Devs 2021</div>`;
+
 
 // Animate Fade In Elements
 let elements;
