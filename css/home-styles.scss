@@ -142,6 +142,10 @@
     transform: scale(0.9);
     opacity: 0;
 
+    .text-container {
+        z-index: 5;
+    }
+
     .title-container {
         width: 100%;
 
@@ -150,12 +154,12 @@
             text-align: center;
             font-weight: 700;
 
-            font-size: 3em;
-            line-height: 0.8em;
-            padding-bottom: 0.25em;
+            font-size: 6em;
+            line-height: 0.5em;
+            padding-bottom: 0.15em;
 
             .main-span {
-                font-size: 0.63em;
+                font-size: 0.31em;
 
                 .sub-span {
                     color: $colorResalte2;
@@ -181,7 +185,7 @@
         text-align: center;
         color: $colorText;
         font-weight: 100;
-        padding: 0.5em 0;
+        padding: 0;
 
         font-size: 1em;
         line-height: 1.2em;
@@ -190,7 +194,7 @@
     .container-btn {
         display: block;
         width: 100%;
-        padding: 1em 0 0.5em;
+        padding: 0;
         
         .home-btn {
             display: block;
@@ -200,10 +204,13 @@
             max-width: 265px;
             margin: 0 auto;
 
-            font-size: 1em;
-            padding: 1em 0.3em;
+            font-size: 1.4em;
+            padding: 1em 0;
             font-weight: 500;
             text-align: center;
+
+            color: $colorResalte;
+            text-decoration: underline;
         }
     }
 
@@ -219,16 +226,16 @@
 .victor-picture {
     display: block;
     width: 100%;
-    min-height: 60vh;
-    margin: -6vh auto 0;
+    min-height: 65vh;
+    margin: -8vh auto 0;
     // position: absolute;
     // top: 0;
     // left: 0;
     // padding-bottom: 100vh;
 
     background: url('../img/HomePicture.png');
-    background-position: top center;
-    background-size: 110%;
+    background-position: top;
+    background-size: 150%;
     background-repeat: no-repeat;
     // filter: grayscale(0.8);
 
@@ -356,12 +363,14 @@
 
         .text-container {
             display: block;
-            width: 55%;
+            width: 50%;
         }
 
         .victor-picture {
-            width: 45%;
-            min-height: 85vh;
+            width: 50%;
+            background-size: 130%;
+            margin: -15vh auto 0;
+            min-height: 95vh;
         }
     }
 }
@@ -370,12 +379,12 @@
 @media (min-width: $breakOneWidth) and (min-height: $breakOneHeight) {
     .victor-picture {
         // min-height: 65vh;
-        min-height: 55vh;
+        // min-height: 55vh;
     }
 
     .main-container .sub-paragraph {
         display: block;
-        width: 85%;
+        // width: 85%;
         margin: 0 auto;
     }
 }
@@ -383,15 +392,21 @@
 // Iphone 6/7/8 Landscape
 @media (min-width: $breakOneHeight) and (min-height: $breakOneWidth) and (orientation: landscape) {
     .main-container {
-        .sub-paragraph {
-            display: block;
-            width: 75%;
-            margin: 0 auto;
+        .title-container h3 {
+            padding-bottom: 0.1em;
         }
 
-        .victor-picture {
-            min-height: 88vh;
+        .sub-paragraph {
+            display: block;
+            width: 85%;
+            margin: 0 auto;
+
+            font-size: 0.85em;
         }
+
+        // .victor-picture {
+        //     min-height: 88vh;
+        // }
     }
 }
 
@@ -399,8 +414,7 @@
 // Iphone 6/7/8 Plus
 @media (min-width: $breakTwoWidth) and (min-height: $breakTwoHeight) {
     .victor-picture {
-        // min-height: 70vh;
-        min-height: 60vh;
+        min-height: 70vh;
     }
 }
 
@@ -412,7 +426,8 @@
 
     .victor-picture {
         margin: -3vh auto 0;
-        min-height: 60vh;
+        background-size: 170%;
+        min-height: 68vh;
     }
 }
 
@@ -426,7 +441,7 @@
     .main-container .victor-picture {
         margin: -20vh auto 0;
         min-height: 100vh;
-        background-size: 100%;
+        background-size: 130%;
     }
 }
 
@@ -435,24 +450,26 @@
         
     .main-container {
         .title-container h3 {
-            font-size: 5em;
+            font-size: 11em;
+            padding-bottom: 0.05em;
         }
 
         .sub-paragraph {
-            width: 65%;
+            width: 100%;
             font-size: 1.5em;
         }
 
         .container-btn .home-btn {
             width: 55%;
-            font-size: 1.4em;
+            font-size: 2em;
         }
 
         .victor-picture {
             // min-height: 50vh;
             // background-size: 70%;
-            min-height: 55vh;
-            background-size: 60%;
+            margin: -8vh auto 0;
+            min-height: 65vh;
+            background-size: 110%;
         }
     } 
 }
@@ -460,24 +477,30 @@
 // Ipad Landscape
 @media (min-width: $breakFourHeight) and (min-height: $breakFourWidth) and (orientation: landscape) {
     .main-container {
+        .text-container {
+            width: 40%;
+            margin: 0 0 0 10%;
+        }
+
         .title-container h3 {
-            font-size: 4.2em;
+            font-size: 8em;
         }
 
         .sub-paragraph {
-            width: 70%;
-            font-size: 1.2em;
+            width: 100%;
+            font-size: 1.1em;
         }
 
         .container-btn .home-btn {
             width: 65%;
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
 
         .victor-picture {
-            margin: -3vh auto 0;
+            width: 50%;
+            margin: 0 auto;
             min-height: 90vh;
-            background-size: 100%;
+            background-size: 120%;
         }
     }
 }
@@ -487,10 +510,14 @@
     .main-container {
         padding: 3em 0 0;
         
+        .container-btn {
+            padding: 1em 0;
+        }
+
         .victor-picture {
-            margin: 0vh auto 0;
-            min-height: 60vh;
-            background-size: 65%;
+            margin: -10vh auto 0;
+            min-height: 70vh;
+            background-size: 100%;
         }
     }
 }
@@ -498,25 +525,26 @@
 // Ipad Pro Landscape
 @media (min-width: $breakFiveHeight) and (min-height: $breakFiveWidth) and (orientation: landscape) {
     .main-container {
+
         .title-container h3 {
-            font-size: 5.5em;
+            font-size: 11em;
         }
 
         .sub-paragraph {
-            width: 70%;
-            font-size: 1.6em;
+            width: 100%;
+            font-size: 1.5em;
         }
 
         .container-btn .home-btn {
             width: 65%;
-            font-size: 1.6em;
+            padding: 1em 0;
+            font-size: 1.8em;
         }
 
         .victor-picture {
             margin: 0vh auto 0;
             min-height: 90vh;
-            // background-size: 110%;
-            background-size: 100%;
+            background-size: 120%;
         }
     }
 }
